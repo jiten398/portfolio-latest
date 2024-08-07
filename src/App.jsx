@@ -10,6 +10,8 @@ const App = () => {
           <Route path="/" element={<IframePage url="https://bisque-standards-617891.framer.app" />} />   
           <Route path="/contact" element={<IframePage url="https://bisque-standards-617891.framer.app/contact" />} />
           <Route path="/about" element={<IframePage url="https://bisque-standards-617891.framer.app/about" />} />
+         <Route path="/stack" element={<IframePage url="https://bisque-standards-617891.framer.app/stack" />} />
+         <Route path="/projects" element={<IframePage url="https://bisque-standards-617891.framer.app/projects" />} />
         </Routes>
       </Router>
     {/* <div className="iframe-container" >
