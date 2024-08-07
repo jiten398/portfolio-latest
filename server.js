@@ -1,7 +1,7 @@
-const express = require('express');
-const path = require('path');
-const { createServer } = require('vite');
-const app = express();
+import express from 'express';
+import path from 'path';
+import { createServer as createViteServer } from 'vite';
+import { fileURLToPath } from 'url';
 
 async function createViteServer() {
   const vite = await createServer({
