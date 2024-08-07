@@ -1,9 +1,14 @@
 import express from 'express';
 import path from 'path';
-import { createServer as createViteServer } from 'vite';
+import { createServer } from 'vite';
 import { fileURLToPath } from 'url';
 
-async function createViteServer() {
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const app = express();
+
+async function startViteServer() {
   const vite = await createServer({
     server: { middlewareMode: 'ssr' },
   });
@@ -22,7 +27,7 @@ async function createViteServer() {
   return { app, vite };
 }
 
-createViteServer().then(({ app }) => {
+startViteServer().then(({ app }) => {
   const port = process.env.PORT || 3000;
   app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
