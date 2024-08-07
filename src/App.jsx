@@ -2,9 +2,8 @@ import React from 'react';
 // import './App.css'; 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import IframePage from './IframePage'; 
-const App = () => {
-  return (
-    document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+document.addEventListener('contextmenu', (e) => e.preventDefault());
 
 function ctrlShiftKey(e, keyCode) {
   return e.ctrlKey && e.shiftKey && e.keyCode === keyCode.charCodeAt(0);
@@ -21,6 +20,9 @@ document.onkeydown = (e) => {
   )
     return false;
 };
+
+const App = () => {
+  return (
     < >
       <Router>
         <Routes>
